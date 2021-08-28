@@ -63,14 +63,7 @@ ARGs:
     <li> Каждый философ должен быть потоком.</li>
 </ul>
 
-<h2>Бонусная часть</h2>
-
-В этой версии специфические правила таковы:
-- Все вилки находятся в середине таблицы.
-- У них нет состояний в памяти, но количество доступных вилок представлено семафором.
-- Каждый философ должен быть процессом, а главный процесс не должен быть философом.
-
-You are allowed to use the following functions:
+<h3>You are allowed to use the following functions:</h3>
 
 -- usleep -- (засыпает на заданное количество микросекунд)
 https://www.opennet.ru/man.shtml?topic=usleep&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
@@ -117,9 +110,14 @@ http://www.c-cpp.ru/content/write-rtlwrite
 http://www.c-cpp.ru/content/free
 
 
-<h3>BONUS</h3>
+<h2>BONUS</h2>
 
-You are allowed to use the following functions:
+<h3>В этой версии специфические правила таковы:</h3>
+- Все вилки находятся в середине таблицы.
+- У них нет состояний в памяти, но количество доступных вилок представлено семафором.
+- Каждый философ должен быть процессом, а главный процесс не должен быть философом.
+
+<h3>You are allowed to use the following functions:</h3>
 <ul>
     <li>memset</li>
     <li>printf</li>
