@@ -63,7 +63,7 @@ ARGs:
     <li> Каждый философ должен быть потоком.</li>
 </ul>
 
-Бонусная часть
+<h2>Бонусная часть</h2>
 
 В этой версии специфические правила таковы:
 - Все вилки находятся в середине таблицы.
@@ -117,7 +117,7 @@ http://www.c-cpp.ru/content/write-rtlwrite
 http://www.c-cpp.ru/content/free
 
 
-BONUS
+<h3>BONUS</h3>
 
 You are allowed to use the following functions:
 <ul>
