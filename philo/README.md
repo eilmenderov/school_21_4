@@ -3,13 +3,13 @@
 <p>In this project, you will learn the basics of threading a process. You will learn how to make threads. You will discover the mutex.</p>
 
 
-How to use:
+<h3>How to use:</h3>
 
-make re && make clean && ./philo 2 1010 500 450 2
+<p>make re && make clean && ./philo 2 1010 500 450 2</p>
 
-for bonus:
+<h3>for bonus:</h3>
 
-make re && make clean && ./philo_bonus 2 1010 500 450 2
+<p>make re && make clean && ./philo_bonus 2 1010 500 450 2</p>
 
 ARGs:
 <ul>
