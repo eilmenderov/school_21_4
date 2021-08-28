@@ -120,26 +120,27 @@ http://www.c-cpp.ru/content/free
 BONUS
 
 You are allowed to use the following functions:
-memset
-printf
-malloc
-free
-write
-exit
-pthread_create
-pthread_detach
-pthread_join
-usleep
-gettimeofday
-waitpid
-fork
-kill
-sem_open
-sem_close
-sem_post
-sem_wait
-sem_unlink
-
+<ul>
+    <li>memset</li>
+    <li>printf</li>
+    <li>malloc</li>
+    <li>free</li>
+    <li>write</li>
+    <li>exit</li>
+    <li>pthread_create</li>
+    <li>pthread_detach</li>
+    <li>pthread_join</li>
+    <li>usleep</li>
+    <li>gettimeofday</li>
+    <li>waitpid</li>
+    <li>fork</li>
+    <li>kill</li>
+    <li>sem_open</li>
+    <li>sem_close</li>
+    <li>sem_post</li>
+    <li>sem_wait</li>
+    <li>sem_unlink</li>
+</ul>
 -- waitpid -- (ожидает завершения процесса  #include <sys/wait.h>)
 https://www.opennet.ru/man.shtml?topic=waitpid&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
 http://ru.manpages.org/waitpid/2
