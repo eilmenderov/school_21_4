@@ -67,21 +67,22 @@ ARGs:
 
 <h3>You are allowed to use the following functions:</h3>
 
-<a href="https://www.opennet.ru/man.shtml?topic=usleep&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- usleep -- (засыпает на заданное количество микросекунд)</a>
-
-<a href="https://www.opennet.ru/man.shtml?topic=gettimeofday&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- gettimeofday -- (определяет время  #include <sys/time.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=pthread_create&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_create -- (#include <pthread.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=pthread_detach&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_detach -- (#include <pthread.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=pthread_join&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_join -- (#include <pthread.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_init&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_init -- (#include <pthread.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_destroy&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_destroy -- (#include <pthread.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_lock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_lock -- (#include <pthread.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_unlock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_unlock -- (#include <pthread.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=memset&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- memset -- (#include <string.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=printf&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- printf -- (#include <stdio.h>)</a>
-<a href="http://www.c-cpp.ru/content/write-rtlwrite">-- write --</a>
-<a href="https://www.opennet.ru/man.shtml?topic=malloc&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- malloc --</a>
-<a href="http://www.c-cpp.ru/content/free">-- free --</a>
+<ul>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=usleep&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- usleep -- (засыпает на заданное количество микросекунд)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=gettimeofday&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- gettimeofday -- (определяет время  #include <sys/time.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=pthread_create&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_create -- (#include <pthread.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=pthread_detach&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_detach -- (#include <pthread.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=pthread_join&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_join -- (#include <pthread.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_init&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_init -- (#include <pthread.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_destroy&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_destroy -- (#include <pthread.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_lock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_lock -- (#include <pthread.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_unlock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_unlock -- (#include <pthread.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=memset&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- memset -- (#include <string.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=printf&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- printf -- (#include <stdio.h>)</a></li>
+    <li><a href="http://www.c-cpp.ru/content/write-rtlwrite">-- write --</a>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=malloc&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- malloc --</a>
+    <li><a href="http://www.c-cpp.ru/content/free">-- free --</a>
+</ul>
 
 <h2>BONUS</h2>
 
@@ -115,11 +116,13 @@ ARGs:
     <li>sem_unlink</li>
 </ul>
 
-<a href="http://ru.manpages.org/waitpid/2">-- waitpid -- (ожидает завершения процесса  #include <sys/wait.h>)</a>
-<a href="http://ru.manpages.org/fork/2">-- fork -- (создает дочерний процесс #include <unistd.h>)</a>
-<a href="https://www.opennet.ru/man.shtml?topic=kill&category=3&russian=5">-- kill -- (send a signal to a process or a group of processes #include <signal.h>)</a>
-<a href="http://ru.manpages.org/sem_open/3">-- sem_open -- (initialize/open a named semaphore #include <semaphore.h>)</a>
-<a href="http://ru.manpages.org/sem_close/3">-- sem_close -- (close a named semaphore #include <semaphore.h>)</a>
-<a href="http://ru.manpages.org/sem_post/3">-- sem_post -- (increment the count of a semaphore #include <semaphore.h>)</a>
-<a href="http://ru.manpages.org/sem_wait/3">-- sem_wait -- (acquire or wait for a semaphore  #include <semaphore.h>)</a>
-<a href="http://ru.manpages.org/sem_unlink/3">-- sem_unlink -- (remove a named semaphore #include <semaphore.h>)</a>
+<ul>
+    <li><a href="http://ru.manpages.org/waitpid/2">-- waitpid -- (ожидает завершения процесса  #include <sys/wait.h>)</a></li>
+    <li><a href="http://ru.manpages.org/fork/2">-- fork -- (создает дочерний процесс #include <unistd.h>)</a></li>
+    <li><a href="https://www.opennet.ru/man.shtml?topic=kill&category=3&russian=5">-- kill -- (send a signal to a process or a group of processes #include <signal.h>)</a></li>
+    <li><a href="http://ru.manpages.org/sem_open/3">-- sem_open -- (initialize/open a named semaphore #include <semaphore.h>)</a></li>
+    <li><a href="http://ru.manpages.org/sem_close/3">-- sem_close -- (close a named semaphore #include <semaphore.h>)</a></li>
+    <li><a href="http://ru.manpages.org/sem_post/3">-- sem_post -- (increment the count of a semaphore #include <semaphore.h>)</a></li>
+    <li><a href="http://ru.manpages.org/sem_wait/3">-- sem_wait -- (acquire or wait for a semaphore  #include <semaphore.h>)</a></li>
+    <li><a href="http://ru.manpages.org/sem_unlink/3">-- sem_unlink -- (remove a named semaphore #include <semaphore.h>)</a></li>
+</ul>
