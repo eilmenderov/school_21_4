@@ -37,7 +37,7 @@ ARGs:
     <li> Каждый раз, когда философ заканчивает есть, он бросает вилку и начинает спать.</li>
     <li> Когда философ закончит спать, он начнет думать.</li>
     <li> Симуляция останавливается, когда философ умирает.</li>
-    <li> Каждая программа должна иметь одинаковые опции:</li>
+    <li> Каждая программа должна иметь одинаковые опции:
     <ul>
         <li>    number_of_philosophers: количество философов, а также количество вилок</li>
         <li>    time_to_die: указывается в миллисекундах, если философ не начнет есть через "time_to_die" миллисекунд после начала последнего приема пищи или начала симуляции, он умрет</li>
@@ -45,9 +45,10 @@ ARGs:
         <li>    time_to_sleep: выражается в миллисекундах и представляет собой время, которое философ потратит на сон.</li>
         <li>    number_of_times_each_philosopher_must_eat: аргумент необязательный, если все философы съедят не менее 'number_of_times_each_philosopher_must_eat', симуляция будет остановлена. Если аргумент не указан, симуляция остановится только при смерти философа.</li>
     </ul>
+	</li>
     <li> Каждому философу должен быть присвоен номер от 1 до 'number_of_philosophers'.</li>
     <li> Философ с номером 1 находится рядом с философом с номером 'number_of_philosophers'. Любой другой философ с номером N сидит между философом N - 1 и философом N + 1.</li>
-    <li> Любое изменение статуса философа должно быть записано следующим образом (при этом X заменяется номером философа, а timestamp_in_ms - текущей временной меткой в миллисекундах)</li>
+    <li> Любое изменение статуса философа должно быть записано следующим образом (при этом X заменяется номером философа, а timestamp_in_ms - текущей временной меткой в миллисекундах)
     <ul>
         <li>timestamp_in_ms X взял вилку</li>
         <li>timestamp_in_ms X ест</li>
@@ -55,6 +56,7 @@ ARGs:
         <li>timestamp_in_ms X думает</li>
         <li>timestamp_in_ms X умер</li>
     </ul>
+	</li>
     <li> Напечатанный статус не должен быть скремблирован или переплетен со статусом другого философа.</li>
     <li> Не может быть более 10 мс между смертью философа и моментом, когда он напечатает свою смерть.</li>
     <li> Однако, философы должны избегать смерти!</li>
@@ -65,50 +67,21 @@ ARGs:
 
 <h3>You are allowed to use the following functions:</h3>
 
--- usleep -- (засыпает на заданное количество микросекунд)
-https://www.opennet.ru/man.shtml?topic=usleep&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
+<a href="https://www.opennet.ru/man.shtml?topic=usleep&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- usleep -- (засыпает на заданное количество микросекунд)</a>
 
--- gettimeofday -- (определяет время  #include <sys/time.h>)
-https://www.opennet.ru/man.shtml?topic=gettimeofday&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- pthread_create -- (#include <pthread.h>)
-https://www.opennet.ru/man.shtml?topic=pthread_create&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- pthread_detach -- (#include <pthread.h>)
-https://www.opennet.ru/man.shtml?topic=pthread_detach&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- pthread_join -- (#include <pthread.h>)
-https://www.opennet.ru/man.shtml?topic=pthread_join&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- pthread_mutex_init -- (#include <pthread.h>)
-https://www.opennet.ru/man.shtml?topic=pthread_mutex_init&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- pthread_mutex_destroy -- (#include <pthread.h>)
-https://www.opennet.ru/man.shtml?topic=pthread_mutex_destroy&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- pthread_mutex_lock -- (#include <pthread.h>)
-https://www.opennet.ru/man.shtml?topic=pthread_mutex_lock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- pthread_mutex_unlock -- (#include <pthread.h>)
-https://www.opennet.ru/man.shtml?topic=pthread_mutex_unlock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- memset -- (#include <string.h>)
-https://www.opennet.ru/man.shtml?topic=memset&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- printf -- (#include <stdio.h>)
-https://www.opennet.ru/man.shtml?topic=printf&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-
--- write --
-https://www.opennet.ru/man.shtml?topic=write&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-http://www.c-cpp.ru/content/write-rtlwrite
-
--- malloc --
-https://www.opennet.ru/man.shtml?topic=malloc&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-http://www.c-cpp.ru/content/write-rtlwrite
-
--- free --
-http://www.c-cpp.ru/content/free
-
+<a href="https://www.opennet.ru/man.shtml?topic=gettimeofday&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- gettimeofday -- (определяет время  #include <sys/time.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=pthread_create&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_create -- (#include <pthread.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=pthread_detach&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_detach -- (#include <pthread.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=pthread_join&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_join -- (#include <pthread.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_init&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_init -- (#include <pthread.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_destroy&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_destroy -- (#include <pthread.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_lock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_lock -- (#include <pthread.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=pthread_mutex_unlock&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- pthread_mutex_unlock -- (#include <pthread.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=memset&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- memset -- (#include <string.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=printf&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- printf -- (#include <stdio.h>)</a>
+<a href="http://www.c-cpp.ru/content/write-rtlwrite">-- write --</a>
+<a href="https://www.opennet.ru/man.shtml?topic=malloc&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man">-- malloc --</a>
+<a href="http://www.c-cpp.ru/content/free">-- free --</a>
 
 <h2>BONUS</h2>
 
@@ -141,28 +114,12 @@ http://www.c-cpp.ru/content/free
     <li>sem_wait</li>
     <li>sem_unlink</li>
 </ul>
--- waitpid -- (ожидает завершения процесса  #include <sys/wait.h>)
-https://www.opennet.ru/man.shtml?topic=waitpid&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-http://ru.manpages.org/waitpid/2
 
--- fork -- (создает дочерний процесс #include <unistd.h>)
-https://www.opennet.ru/man.shtml?topic=fork&russian=0&category=&submit=%F0%CF%CB%C1%DA%C1%D4%D8+man
-http://ru.manpages.org/fork/2
-
--- kill -- (send a signal to a process or a group of processes #include <signal.h> )
-https://www.opennet.ru/man.shtml?topic=kill&category=3&russian=5
-
--- sem_open -- (initialize/open a named semaphore #include <semaphore.h>)
-http://ru.manpages.org/sem_open/3
-
--- sem_close -- (close a named semaphore #include <semaphore.h>)
-http://ru.manpages.org/sem_close/3
-
--- sem_post -- (increment the count of a semaphore #include <semaphore.h>)
-http://ru.manpages.org/sem_post/3
-
--- sem_wait -- (acquire or wait for a semaphore  #include <semaphore.h>)
-http://ru.manpages.org/sem_wait/3
-
--- sem_unlink -- (remove a named semaphore #include <semaphore.h>)
-http://ru.manpages.org/sem_unlink/3
+<a href="http://ru.manpages.org/waitpid/2">-- waitpid -- (ожидает завершения процесса  #include <sys/wait.h>)</a>
+<a href="http://ru.manpages.org/fork/2">-- fork -- (создает дочерний процесс #include <unistd.h>)</a>
+<a href="https://www.opennet.ru/man.shtml?topic=kill&category=3&russian=5">-- kill -- (send a signal to a process or a group of processes #include <signal.h>)</a>
+<a href="http://ru.manpages.org/sem_open/3">-- sem_open -- (initialize/open a named semaphore #include <semaphore.h>)</a>
+<a href="http://ru.manpages.org/sem_close/3">-- sem_close -- (close a named semaphore #include <semaphore.h>)</a>
+<a href="http://ru.manpages.org/sem_post/3">-- sem_post -- (increment the count of a semaphore #include <semaphore.h>)</a>
+<a href="http://ru.manpages.org/sem_wait/3">-- sem_wait -- (acquire or wait for a semaphore  #include <semaphore.h>)</a>
+<a href="http://ru.manpages.org/sem_unlink/3">-- sem_unlink -- (remove a named semaphore #include <semaphore.h>)</a>
