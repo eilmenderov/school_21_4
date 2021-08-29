@@ -20,6 +20,9 @@ ARGs:
     <li>[number_of_times_each_philosopher_must_eat]</li>
 </ul>
 
+<h3>Example</h3>
+<img src="https://raw.githubusercontent.com/Avchar/school_21_4/master/philo/Example.png" alt="Example">
+
 <h2>Обязательная часть</h2>
 
 Вам придется написать одну программу для обязательной части и одну для бонусной части, но они будут иметь одинаковые основные правила:
