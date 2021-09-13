@@ -12,7 +12,8 @@ to check norm:			make norm
 ```
 If you have some problems with readline, install it on you PC and change PATH with library and include way in Makefile.
 
-## Example ![minishell](./example.png)
+<h3>Example:</h3>
+<img src="./example.png" alt="Example">
 
 <h2>Введение</h2>
 
