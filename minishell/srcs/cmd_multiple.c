@@ -99,5 +99,6 @@ void	ft_multiple_cmd(t_cmd *cmd, int i)
 		cmd->data->all_pid[i] = fl;
 		tmp = tmp->next, i++;
 	}
-	ft_close_all(cmd->data), ft_wait_all_cmd(cmd->data);
+	ft_close_all(cmd->data);
+	ft_wait_all_cmd(cmd->data);
 }

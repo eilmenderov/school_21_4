@@ -12,6 +12,8 @@ to check norm:			make norm
 ```
 If you have some problems with readline, install it on you PC and change PATH with library and include way in Makefile.
 
+## Example ![minishell](./example.png)
+
 <h2>Введение</h2>
 
 <p>Существование оболочек связано с самим существованием ИТ. В то время все программисты согласились, что общение с компьютером с помощью выровненных переключателей 1/0 вызывает серьезное раздражение. Вполне логично, что им пришла в голову идея общаться с компьютером с помощью интерактивных строк команд на языке, несколько близком к английскому. С помощью Minishell вы сможете совершить путешествие во времени и вернуться к проблемам, с которыми люди сталкивались, когда Windows еще не существовало.</p>
@@ -145,3 +147,13 @@ If you have some problems with readline, install it on you PC and change PATH wi
     <li>-L /Users/${USER}/.brew/opt/readline/lib</li>
     <li>-I /Users/${USER}/.brew/opt/readline/include</li>
 </ul>
+
+```
+	i = 0;
+	t_data *data = cmd->data;
+	while (data->fd_pipes[i])
+	{
+		printf("fd[%d][0] = %d\tfd[%d][1] = %d\n", i, data->fd_pipes[i][0], i, data->fd_pipes[i][1]);
+		i++;
+	}
+```
