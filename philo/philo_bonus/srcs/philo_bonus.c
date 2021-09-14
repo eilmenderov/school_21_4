@@ -44,6 +44,7 @@ static void	ft_check_philos(t_table *table, int dead, char *str)
 	int	i;
 	int	check;
 
+	(void)dead;
 	while (table->nb_full < table->size)
 	{
 		waitpid(-1, &check, 0);
@@ -68,7 +69,6 @@ static void	ft_check_philos(t_table *table, int dead, char *str)
 int	main(int ac, char **av)
 {
 	t_table	table;
-	int		i;
 
 	if (ac != 5 && ac != 6)
 	{

@@ -67,7 +67,6 @@ static void	ft_check_philos(t_table *table, int dead, char *str)
 int	main(int ac, char **av)
 {
 	t_table	table;
-	int		i;
 
 	if (ac != 5 && ac != 6)
 	{

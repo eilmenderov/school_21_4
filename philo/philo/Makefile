@@ -28,10 +28,10 @@ SHALLOW = \033[0m
 all:		${NAME}
 
 %.o:%.c		${HEADER}
-			@${CC} ${CFLAGC} -c $< -o ${<:.c=.o}
+			@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 ${NAME}:	${OBJS} ${HEADER}
-			@${CC} ${CFLAGC} -o ${NAME} ${OBJS}
+			@${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 			@echo "${GREEN}${NAME} compile!${SHALLOW}"
 
 norm:
