@@ -2,8 +2,8 @@
 
 static char	*ft_points(t_cmd *do_cmd)
 {
-	char	*rez;
-	t_env	*tmp;
+	char		*rez;
+	t_env		*tmp;
 
 	if (do_cmd->cmd && do_cmd->cmd[1] == '.' && do_cmd->cmd[2] == 0)
 		return (NULL);
@@ -23,20 +23,20 @@ static char	*ft_points(t_cmd *do_cmd)
 	return (NULL);
 }
 
-char	*ft_find_cmd(t_cmd *do_cmd)
+char	*ft_find_cmd(t_cmd *do_cmd, int i)
 {
 	struct stat	buf;
-	int			i;
 	char		*try;
 	char		**env_path;
 
 	if (ft_ch_for_coinc(do_cmd->cmd[0], "./~"))
 	{
 		try = ft_points(do_cmd);
+		if (try && stat(try, &buf))
+			free(try), try = NULL;
 		return (try);
 	}
 	env_path = ft_proc_envp(do_cmd->data);
-	i = 0;
 	while (env_path && env_path[i])
 	{
 		try = ft_strjoin(env_path[i], do_cmd->cmd);
@@ -59,6 +59,9 @@ static void	ft_pool_helper(t_cmd *cmd, char *str, int *i)
 	cmd->pid = 0;
 	cmd->dino = ft_strndup(&str[cmd->data->count], *i - cmd->data->count);
 	cmd->data->count = *i + 1;
+	cmd->tot_arg = 0;
+	while (cmd->arg && cmd->arg[cmd->tot_arg])
+		cmd->tot_arg += 1;
 }
 
 t_cmd	*ft_pool_new_cmd(t_data *data, char *str, int *i)

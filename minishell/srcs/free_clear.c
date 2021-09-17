@@ -44,29 +44,37 @@ void	ft_free_data(t_data *data)
 		tmp = tmp->next;
 		free(buf);
 	}
-	ft_clean_all(NULL, data->cmd_start, 0);
+	ft_clean_all(NULL, data->cmd_start, 0, data);
 	data = NULL;
 }
 
-void	ft_clean_all(char *str, t_cmd *start, int i)
+static void	ft_clean_helper(t_data *data)
+{
+	close(data->fd_in), data->fd_in = -1;
+	close(data->fd_out), data->fd_out = -1;
+	if (data->fl)
+		data->ret_val = 3;
+}
+
+void	ft_clean_all(char *str, t_cmd *start, int i, t_data *data)
 {
 	t_cmd	*tmp;
 
 	if (str)
 		free(str), str = NULL;
+	if (data->rez)
+		free(data->rez), data->rez = NULL;
+	data->total_cmd = 0;
+	data->count = 0;
+	ft_clean_helper(data);
+	if (data->all_pid)
+		free(data->all_pid), data->all_pid = NULL;
+	while (data->fd_pipes && data->fd_pipes[i])
+		free(data->fd_pipes[i]), data->fd_pipes[i] = NULL, i++;
+	if (data->fd_pipes)
+		free(data->fd_pipes), data->fd_pipes = NULL;
 	if (!start)
 		return ;
-	if (start->data->rez)
-		free(start->data->rez), start->data->rez = NULL;
-	start->data->total_cmd = 0;
-	start->data->count = 0;
-	close(start->data->fd_in), close(start->data->fd_out);
-	if (start->data->all_pid)
-		free(start->data->all_pid), start->data->all_pid = NULL;
-	while (start->data->fd_pipes && start->data->fd_pipes[i])
-		free(start->data->fd_pipes[i]), start->data->fd_pipes[i] = NULL, i++;
-	if (start->data->fd_pipes)
-		free(start->data->fd_pipes), start->data->fd_pipes = NULL;
 	tmp = start;
 	tmp->data->cmd_start = NULL;
 	while (tmp)
@@ -74,4 +82,16 @@ void	ft_clean_all(char *str, t_cmd *start, int i)
 		start = tmp->next, ft_free_cmd(tmp);
 		tmp = start;
 	}
+}
+
+void	ft_null_env(t_data *data, char **av)
+{
+	t_env	*start;
+	char	*str;
+
+	start = ft_new_env(ft_strdup("SHLVL"), ft_strdup("1"), 1);
+	start->next = ft_new_env(ft_strdup("_"), ft_strdup(av[0]), 1);
+	str = getcwd(NULL, PWD_LEN);
+	start->next->next = ft_new_env(ft_strdup("PWD"), str, 1);
+	data->beg_env = start;
 }

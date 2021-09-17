@@ -10,9 +10,11 @@ static int	ft_print_export(t_env *env)
 	{
 		elem_sort = ft_find_key(env);
 		if (!elem_sort->visible && elem_sort->val)
-			printf("declare -x %s=\"%s\"\n", elem_sort->key, elem_sort->val);
+			ft_putstr_fd("declare -x ", 1), ft_putstr_fd(elem_sort->key, 1),
+			ft_putstr_fd("=\"", 1), ft_putstr_fd(elem_sort->val, 1),
+			ft_putendl_fd("\"", 1);
 		else if (!elem_sort->visible && !elem_sort->val)
-			printf("declare -x %s\n", elem_sort->key);
+			ft_putstr_fd("declare -x ", 1), ft_putendl_fd(elem_sort->key, 1);
 		tmp = tmp->next;
 	}
 	tmp = env;
@@ -24,7 +26,7 @@ static int	ft_print_export(t_env *env)
 	return (0);
 }
 
-static int	ft_skip_fw(char *str)
+int	ft_skip_fw(char *str)
 {
 	int	i;
 
@@ -33,7 +35,7 @@ static int	ft_skip_fw(char *str)
 	i = 0;
 	while (str[i] && str[i] == ' ')
 		i++;
-	while (str[i] && str[i] != ' ')
+	while (str[i] && str[i] != ' ' )
 		i++;
 	while (str[i] && str[i] == ' ')
 		i++;

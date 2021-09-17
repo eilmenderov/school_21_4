@@ -4,7 +4,7 @@
 
 ### **You can find subject and check list [here](./docs)**
 
-### This group project was written together with [Zhenya-bz](https://github.com/Zhunya-bz)
+### This group project was written by [Avchar](https://github.com/Avchar) and [Zhunya-bz](https://github.com/Zhunya-bz)
 
 ## How to use: ##
 ```
@@ -13,6 +13,8 @@ to start project:		make re && ./minishell
 to check norm:			make norm
 ```
 If you have some problems with readline, install it on you PC and change PATH with library and include way in Makefile.
+
+<h3><a href="#test">About test here</a></h3>
 
 <h3>Example:</h3>
 <img src="./example.png" alt="Example">
@@ -137,18 +139,51 @@ If you have some problems with readline, install it on you PC and change PATH wi
 	<li>add_history</li>
 </ul>
 
+<h1 id="test">TESTER</h1>
+
+## Requirements
+
+- You must have your prompt and any other message/banner printed on ``STDERR`` (like bash)
+
+## Usage
+
+* Run: ``make test``, or for  specific test: ``bash test.sh [echo exit pipe etc..]``
+
+## What does it test ?
+
+- ``echo``
+- ``cd + pwd``
+- ``exit``
+- ``pipe |``
+- ``redirect > >> < ``
+- ``export``
+- ``env``
+- ``unset``
+- ``exit status ($?)``
+- ``syntax errors``
+- ``quote (bonus)``
+- ``oper (bonus) $$ || ()``
+- ``wildcard (bonus)``
+
+## What should you test by yourself ?
+
+Almost everything :) This tester is not perfect and is not checking ``leaks``, ``heredoc`` and ``error messages``.<br>
+Some tests'l be show another error codes.
+Also it not good for checking projects with termcaps.
+
+### For macOS
 <p>instal brew: curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh</p>
 
 <p>HOME macOS:</p>
 <ul>
-    <li>-L /usr/local/opt/readline/lib</li>
-    <li>-I /usr/local/opt/readline/include</li>
+    <li>-L/usr/local/opt/readline/lib</li>
+    <li>-I/usr/local/opt/readline/include</li>
 </ul>
 
 <p>school21 macOS:</p>
 <ul>
-    <li>-L /Users/${USER}/.brew/opt/readline/lib</li>
-    <li>-I /Users/${USER}/.brew/opt/readline/include</li>
+    <li>-L/Users/${USER}/.brew/opt/readline/lib</li>
+    <li>-I/Users/${USER}/.brew/opt/readline/include</li>
 </ul>
 
 ```
