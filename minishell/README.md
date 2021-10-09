@@ -189,12 +189,3 @@ Also it not good for checking projects with termcaps.
     <li>-I/Users/${USER}/.brew/opt/readline/include</li>
 </ul>
 
-```
-	i = 0;
-	t_data *data = cmd->data;
-	while (data->fd_pipes[i])
-	{
-		printf("fd[%d][0] = %d\tfd[%d][1] = %d\n", i, data->fd_pipes[i][0], i, data->fd_pipes[i][1]);
-		i++;
-	}
-```

@@ -5,11 +5,15 @@
 
 <h3>How to use:</h3>
 
-<p>make re && make clean && ./philo 2 1010 500 450 2</p>
+```
+make re && make clean && ./philo 2 1010 500 450 2
+```
 
 <h3>for bonus:</h3>
 
-<p>make re && make clean && ./philo_bonus 2 1010 500 450 2</p>
+```
+make re && make clean && ./philo_bonus 2 1010 500 450 2
+```
 
 ARGs:
 <ul>
