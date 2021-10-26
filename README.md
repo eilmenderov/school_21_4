@@ -4,5 +4,5 @@ To close this level you need to pass 2 projects and Exam_rank_03:
 * philosophers
 
 ## Result:
-### [minishell](./minishell) (101/100)
-### [philosophers](./philo) (125/100)
+### [minishell](./minishell) (101/100) ✅ 
+### [philosophers](./philo) (125/100) ✅ 
